@@ -1,0 +1,173 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.contents {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+body{
+    font-family: "Old Standard TT", serif;
+    font-weight: 400;
+    font-style: normal;
+    width: 100%;
+    max-width: 100vw;
+}
+.indexBody{
+  background-color: rgb(1, 1, 24);
+  background-size:cover;
+}
+
+/* Navigation bar */
+.navbar{
+    position: relative;
+    animation: Animation 2s infinite alternate;
+    border-bottom:5px  solid #3E7B27;
+    
+}
+@keyframes Animation {
+  0% {
+    background-color: rgba(0, 0, 0, 0.747);
+  }
+  100% {
+    background-color: #1a1a1a73;
+  }
+  }
+.navbar::after {
+    content: ""; 
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    background-image: url(./assets/all.images/main/waves.gif);
+    background-size:cover;
+    background-position: center center;
+    z-index: -1;
+    width: 100%;
+}
+.profile{
+  height: 10rem;
+  width: 10rem;
+  border-radius: 50%;
+}
+.profile:hover {
+  animation: shake-slow 0.1s ease-in-out infinite;
+}
+@keyframes shake-slow {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(-1px, 1px);
+  }
+  50% {
+    transform: translate(1px, 1px);
+  }
+  75% {
+    transform: translate(-1px, 1px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+/* accordion */ 
+.custom_accordian{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin:2rem;
+}
+.accordion-collapse{
+background-color:#f4f4f4;
+}
+.accordion-flush{
+    margin-top: 3rem;
+    border: 2px solid rgb(47, 0, 255);
+}
+/* Elements Box1 */
+.contents{
+  display: grid;
+  grid-template-rows: 1fr;
+  place-items: center;
+  row-gap: 1rem;
+  column-gap: 1rem;
+  background-color:#f8f8f800;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+@media (max-width: 768px){
+  .cards{
+    width: 100%;
+  }
+  .contents{
+    justify-content:center;
+    row-gap: 1rem;
+    column-gap: 1rem;
+  }
+}
+.card-text{
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 0;
+  margin:0;
+}
+.cards{
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+.cards:hover{
+  transform: scale3d(1.01,1.01,1.01);
+  box-shadow: 2px 2px 5px black;
+  
+}
+
+/* WEB accordian css */
+.link-card {
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.link-card:hover {
+  transform: translateY(-0.5rem) translateX(-0.5rem);
+  box-shadow: 5px 6px 12px rgb(0, 0, 0);
+}
+
+.card-body {
+  background-color: #f8f9fa;
+  padding: 20px;
+  flex-grow: 1; 
+}
+
+.card-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border: none;
+  font-size: 0.9rem;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.container {
+  padding: 20px;
+}
+
+/* Ensuring equal card width */
+.col-md-4 {
+  display: flex;
+  justify-content: center;
+}
+
+/* Adjust the card width */
+.link-card {
+  width: 100%; /* Ensure each card takes full column space */
+}
