@@ -85,6 +85,18 @@ background-color:#f4f4f4;
     margin-top: 3rem;
     border: 2px solid rgb(47, 0, 255);
 }
+.scrolling{
+    max-height: 350px;
+    overflow-y: auto;
+}
+.scrolling::-webkit-scrollbar {
+    width: 10px;
+    height: 5px;
+}
+.scrolling::-webkit-scrollbar-thumb {
+    background-color: #2e2323; 
+    border-radius: 10px;
+}
 /* Elements Box1 */
 .contents{
   display: grid;
