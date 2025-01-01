@@ -75,6 +75,7 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
+  margin:5rem;
 }
 .accordion-collapse{
   transition: background-color 0.5s ease;
@@ -125,10 +126,12 @@ body{
   margin:0;
 }
 .cards{
+  padding: 0%;
+  margin: 0%;
   transition: transform 0.3s ease, box-shadow 0.3s ease; 
 }
 .cards:hover{
-  transform: scale3d(1.01,1.01,1.01);
+  transform: scale3d(1.02,1.02,1.02);
   box-shadow: 2px 2px 5px black;
   
 }
