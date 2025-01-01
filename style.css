@@ -3,11 +3,6 @@
   padding: 0;
   box-sizing: border-box;
 }
-.contents {
-  display: grid;
-  gap: 20px;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-}
 body{
     font-family: "Old Standard TT", serif;
     font-weight: 400;
@@ -50,8 +45,12 @@ body{
   height: 10rem;
   width: 10rem;
   border-radius: 50%;
+  transition: all 1s ease;
 }
 .profile:hover {
+  scale: 1.1;
+  box-shadow:0px 0px 15px gold;
+  cursor:pointer;
   animation: shake-slow 0.1s ease-in-out infinite;
 }
 @keyframes shake-slow {
@@ -76,10 +75,10 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
-  margin:2rem;
 }
 .accordion-collapse{
-background-color:#f4f4f4;
+  transition: background-color 0.5s ease;
+  background-color:#f4f4f4;
 }
 .accordion-flush{
     margin-top: 3rem;
@@ -100,6 +99,7 @@ background-color:#f4f4f4;
 /* Elements Box1 */
 .contents{
   display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   grid-template-rows: 1fr;
   place-items: center;
   row-gap: 1rem;
